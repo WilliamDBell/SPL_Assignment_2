@@ -18,3 +18,9 @@ sum-up-numbers-simple(L, N) :-
 
 % Base Case
 sum-list-general([],0).
+
+sum-list-general([Head | Tail], Sum) :-
+  is_list(Head),
+  sum-list-general(Tail, Sum1),
+  sum-list-general(Head, Sum2),
+  Sum is Sum1 + Sum2.
