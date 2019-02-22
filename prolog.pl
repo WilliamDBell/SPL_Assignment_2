@@ -33,3 +33,7 @@ sum-list-general([Head | Tail], Sum) :-
 sum-list-general([Head | Tail], Sum) :-
   sum-list-general(Tail, Sum1),
   Sum is Sum1.
+
+sum-up-numbers-general(L, N) :-
+  sum-list-general(L, Sum),
+  Sum == N.
