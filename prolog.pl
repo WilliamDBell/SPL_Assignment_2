@@ -11,3 +11,7 @@ sum-list([Head | Tail], Sum) :-
 sum-list([Head | Tail], Sum) :-
   sum-list(Tail, Sum1),
   Sum is Sum1.
+  
+sum-up-numbers-simple(L, N) :-
+  sum-list(L, Sum),
+  Sum == N.
