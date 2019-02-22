@@ -29,3 +29,7 @@ sum-list-general([Head | Tail], Sum) :-
   number(Head),
   sum-list-general(Tail, Sum1),
   Sum is Sum1 + Head.
+
+sum-list-general([Head | Tail], Sum) :-
+  sum-list-general(Tail, Sum1),
+  Sum is Sum1.
