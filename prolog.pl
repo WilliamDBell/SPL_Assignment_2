@@ -15,3 +15,6 @@ sum-list([Head | Tail], Sum) :-
 sum-up-numbers-simple(L, N) :-
   sum-list(L, Sum),
   Sum == N.
+
+% Base Case
+sum-list-general([],0).
