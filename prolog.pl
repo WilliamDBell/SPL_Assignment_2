@@ -43,3 +43,6 @@ find_min([Head | Tail], Min) :-
   find_min(Tail, Head, Min).
 
 find_min([], Min1, Min1).
+
+find_min([ Head| Tail], Min1, Min0):- 
+  find_min(Tail, Min1, Min0).
