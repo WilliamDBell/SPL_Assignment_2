@@ -37,3 +37,9 @@ sum-list-general([Head | Tail], Sum) :-
 sum-up-numbers-general(L, N) :-
   sum-list-general(L, Sum),
   Sum == N.
+
+
+find_min([Head | Tail], Min) :-
+  find_min(Tail, Head, Min).
+
+find_min([], Min1, Min1).
