@@ -46,3 +46,8 @@ find_min([], Min1, Min1).
 
 find_min([ Head| Tail], Min1, Min0):- 
   find_min(Tail, Min1, Min0).
+
+find_min([Head | Tail], Min1, Min0):-
+  number(Head),
+  Min2 is min(Head, Min1), 
+  find_min(Tail, Min2, Min0).
